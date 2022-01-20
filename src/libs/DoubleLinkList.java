@@ -1,6 +1,9 @@
 package libs;
 
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
 public class DoubleLinkList<T> {
     Node<T> head, tail;
     int length;
@@ -67,8 +70,13 @@ public class DoubleLinkList<T> {
         return node;
     }
 
-    public void traverse(){
-
+    public void traverse(DListTraverseMethod<T> method) throws Exception {
+        Node<T> node = tail;
+        int i = 0;
+        while(i<length){
+            method.start(node);
+            i++;
+        }
     }
 
 }
