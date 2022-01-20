@@ -70,7 +70,7 @@ public class DoubleLinkList<T> {
         return node;
     }
 
-    public void traverse(DListTraverseMethod<T> method) throws Exception {
+    public void traverse(DListTraverseMethod<T> method) {
         Node<T> node = tail;
         int i = 0;
         while(i<length){

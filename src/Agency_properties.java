@@ -1,12 +1,16 @@
+import java.util.ArrayList;
+
 public class Agency_properties {
 
-    private String name;
+    private ArrayList<Integer> name;
 
-    Agency_properties(String name){
-        this.name = name;
+    Agency_properties(ArrayList<Integer> list){
+        for (int a : list) {
+            name.add(a);
+        }
     }
 
-    String name(){
-        return this.name;
+    ArrayList<Integer> name(){
+        return name;
     }
 }
