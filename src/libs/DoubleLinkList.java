@@ -3,6 +3,7 @@ package libs;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.List;
 
 public class DoubleLinkList<T> {
     Node<T> head, tail;
@@ -73,15 +74,46 @@ public class DoubleLinkList<T> {
     public void traverse(DListTraverseMethod<T> method) {
         Node<T> node = tail;
         int i = 0;
-        while(i<length){
+        while (i < length) {
             method.start(node);
+            node = node.pre;
             i++;
         }
     }
 
+    public boolean removeHead(){
+        if(length==0) return false;
+        if(head.next != null){
+            head.next.pre = null;
+            head = head.next;
+        } else {
+            head = null;
+        }
+        length--;
+        return true;
+    }
+
+    public  boolean removeTail(){
+        if(length==0) return false;
+        if(tail.pre != null){
+            tail.pre.next = null;
+            tail = tail.pre;
+        } else {
+            tail = null;
+        }
+        length--;
+        return true;
+    }
+
+    public boolean remove(Node<T> node) {
+        if (length == 0) return false;
+        length--;
+        return true;
+    }
+
     public static void main(String[] args) {
         DoubleLinkList<Integer> l = new DoubleLinkList<>();
-        for(int i=0;i<10;i++){
+        for (int i = 0; i < 10; i++) {
             l.pushBack(i);
         }
         try {
