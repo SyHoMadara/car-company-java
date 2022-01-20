@@ -8,6 +8,7 @@ public class Node<T> {
     Node(T data) {
         next = null;
         pre = null;
+        this.data = data;
     }
     Node(){
         next = null;
