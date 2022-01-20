@@ -75,6 +75,7 @@ public class DoubleLinkList<T> {
         int i = 0;
         while(i<length){
             method.start(node);
+            node = node.pre;
             i++;
         }
     }
