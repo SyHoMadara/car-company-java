@@ -79,4 +79,20 @@ public class DoubleLinkList<T> {
         }
     }
 
+    public static void main(String[] args) {
+        DoubleLinkList<Integer> l = new DoubleLinkList<>();
+        for(int i=0;i<10;i++){
+            l.pushBack(i);
+        }
+        try {
+            l.traverse(new DListTraverseMethod<Integer>() {
+                @Override
+                public void start(Node<Integer> node) {
+                    System.out.println(node.data);
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
