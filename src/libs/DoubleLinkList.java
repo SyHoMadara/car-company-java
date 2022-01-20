@@ -120,6 +120,8 @@ public class DoubleLinkList<T> {
         for (int i = 0; i < 10; i++) {
             l.pushBack(i);
         }
+        Node<Integer> node = l.getAt(5);
+        l.remove(node);
         try {
             l.traverse(new DListTraverseMethod<Integer>() {
                 @Override
