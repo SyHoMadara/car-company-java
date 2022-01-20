@@ -25,4 +25,11 @@ public class DoubleLinkList<T> {
     public void insertAfter(Node<T> node ,T data){
 
     }
+
+    public void pushBack(T data){
+
+    }
+    public void pushTail(T data){
+
+    }
 }
