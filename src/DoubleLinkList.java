@@ -32,4 +32,8 @@ public class DoubleLinkList<T> {
     public void pushTail(T data){
 
     }
+    public void getAt(int i){
+
+    }
+
 }
