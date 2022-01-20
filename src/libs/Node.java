@@ -10,7 +10,7 @@ public class Node<T> {
         pre = null;
         this.data = data;
     }
-    Node(){
+    public Node(){
         next = null;
         pre = null;
     }
