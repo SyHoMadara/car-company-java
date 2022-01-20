@@ -107,6 +107,10 @@ public class DoubleLinkList<T> {
 
     public boolean remove(Node<T> node) {
         if (length == 0) return false;
+        if (node == tail) return  removeTail();
+        if (node == head) return removeHead();
+        node.next.pre = node.pre;
+        node.pre.next = node.next;
         length--;
         return true;
     }
