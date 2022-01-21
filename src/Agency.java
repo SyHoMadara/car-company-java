@@ -20,6 +20,10 @@ public class Agency {
         AgencyServices.pushTail(service);
     }
 
+    void removeService(Service service) {
+
+    }
+
     void listAgencyServices() {
         AgencyServices.traverse(DLT);
     }
