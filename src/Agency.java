@@ -1,8 +1,4 @@
-import java.util.ArrayList;
-
 public class Agency {
-
-    static public ArrayList<Agency> allAgency = new ArrayList<>();
 
     private String name;
 
@@ -10,7 +6,7 @@ public class Agency {
         this.name = name;
     }
 
-    String name(){
+    String getName(){
         return this.name;
     }
 }
