@@ -1,13 +1,8 @@
 package libs;
 
 
-import com.sun.javafx.image.IntPixelGetter;
 import javafx.util.Pair;
-
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.Comparator;
-import java.util.List;
 import java.util.PriorityQueue;
 
 public class DoubleLinkList<T> {
@@ -18,6 +13,10 @@ public class DoubleLinkList<T> {
         head = null;
         tail = null;
         length = 0;
+    }
+
+    public int getLength() {
+        return this.length;
     }
 
     public Node<T> insertAfter(Node<T> node, T data) {
@@ -73,11 +72,10 @@ public class DoubleLinkList<T> {
         for (int j = 0; j < i; j++) {
             node = node.pre;
         }
-        PriorityQueue<Integer> a;
         return node;
     }
 
-    public void traverse(DListTraverseMethod<T> method) throws Exception {
+    public void traverse(DListTraverseMethod<T> method) {
         Node<T> node = tail;
         int i = 0;
         while (i < length) {
