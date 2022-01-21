@@ -6,4 +6,7 @@ public enum Car {
     Car(String details){
         this.details = details;
     }
+    /*
+    Car c = Car.SAMAND;
+     */
 }
