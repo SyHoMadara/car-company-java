@@ -2,10 +2,11 @@ package libs;
 
 
 import javafx.util.Pair;
-import java.util.Comparator;
-import java.util.PriorityQueue;
 
-public class DoubleLinkList<T> {
+import java.util.*;
+import java.util.function.Consumer;
+
+public class DoubleLinkList<T>{
     Node<T> head, tail;
     int length;
 
@@ -77,11 +78,9 @@ public class DoubleLinkList<T> {
 
     public void traverse(DListTraverseMethod<T> method) {
         Node<T> node = tail;
-        int i = 0;
-        while (i < length) {
+        while (node != null) {
             method.start(node);
             node = node.pre;
-            i++;
         }
     }
 
