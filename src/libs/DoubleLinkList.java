@@ -120,7 +120,8 @@ public class DoubleLinkList<T> {
         length--;
         return true;
     }
-
+    /*
+    usage
     public static void main(String[] args) {
         DoubleLinkList<Integer> l = new DoubleLinkList<>();
         for (int i = 0; i < 10; i++) {
@@ -138,29 +139,6 @@ public class DoubleLinkList<T> {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
-
-        PriorityQueue<Pair<Integer, Integer>> p = new PriorityQueue<>(new Comparator<Pair<Integer, Integer>>() {
-            @Override
-            public int compare(Pair<Integer, Integer> o1, Pair<Integer, Integer> o2) {
-                int comp = o2.getKey().compareTo(o1.getKey());
-                if(comp != 0) return comp;
-                return o1.getValue().compareTo(o2.getValue());
-            }
-        });
-        Pair<Integer, Integer> a = new Pair<>(3,5);
-        Pair<Integer, Integer> b = new Pair<>(3,4);
-        Pair<Integer, Integer> c = new Pair<>(3,2);
-        Pair<Integer, Integer> d = new Pair<>(2,1);
-        p.add(a);
-        p.add(b);
-        p.add(c);
-        p.add(d);
-        while(!p.isEmpty()){
-            Pair pp = p.remove();
-            System.out.println(pp.getKey() + " " + pp.getValue());
-        }
-
     }
+     */
 }
