@@ -28,7 +28,7 @@ public class PQueue<T> {
     }
 
     int left(int i) {
-        return 2 * i + 2;
+        return 2 * i + 1;
     }
 
     boolean add(T x) {
@@ -91,7 +91,8 @@ public class PQueue<T> {
     boolean isEmpty(){
         return n == 0;
     }
-
+    /*
+    usage
     public static void main(String[] args) {
         PQueue<Pair<Integer, Integer>> p = new PQueue<>(new Comparator<Pair<Integer, Integer>>() {
             @Override
@@ -114,4 +115,5 @@ public class PQueue<T> {
             System.out.println(pp.getKey() + " " + pp.getValue());
         }
     }
+     */
 }
