@@ -6,7 +6,7 @@ public class allAgencies {
 
     public static DoubleLinkList<Agency> allAgencies = new DoubleLinkList<>();
 
-    void addAgency(Agency agency){
+    void addAgency(Agency agency) {
         allAgencies.pushBack(agency);
     }
 
@@ -15,13 +15,11 @@ public class allAgencies {
     }
 
 
-
-
     void listAgencies() {
         allAgencies.traverse(DLT);
     }
 
-    DListTraverseMethod<Agency> DLT = new DListTraverseMethod<>() {
+    DListTraverseMethod<Agency> DLT = new DListTraverseMethod<Agency>() {
         @Override
         public void start(Node<Agency> node) {
             System.out.println(node.data.getName());
