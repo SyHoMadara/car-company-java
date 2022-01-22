@@ -1,10 +1,5 @@
 package libs;
 
-
-import javafx.util.Pair;
-import java.util.Comparator;
-import java.util.PriorityQueue;
-
 public class DoubleLinkList<T> {
     Node<T> head, tail;
     int length;
@@ -17,6 +12,10 @@ public class DoubleLinkList<T> {
 
     public int getLength() {
         return this.length;
+    }
+
+    public Node<T> getTail() {
+        return tail;
     }
 
     public Node<T> insertAfter(Node<T> node, T data) {

@@ -4,7 +4,7 @@ import libs.Node;
 
 public class allAgencies {
 
-    private DoubleLinkList<Agency> allAgencies = new DoubleLinkList<>();
+    public static DoubleLinkList<Agency> allAgencies = new DoubleLinkList<>();
 
     void addAgency(Agency agency){
         allAgencies.pushBack(agency);
@@ -21,7 +21,7 @@ public class allAgencies {
         allAgencies.traverse(DLT);
     }
 
-    DListTraverseMethod<Agency> DLT = new DListTraverseMethod<Agency>() {
+    DListTraverseMethod<Agency> DLT = new DListTraverseMethod<>() {
         @Override
         public void start(Node<Agency> node) {
             System.out.println(node.data.getName());

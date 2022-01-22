@@ -18,7 +18,7 @@ public class allServices {
         allServices.traverse(DLT);
     }
 
-    DListTraverseMethod<Service> DLT = new DListTraverseMethod<Service>() {
+    DListTraverseMethod<Service> DLT = new DListTraverseMethod<>() {
         @Override
         public void start(Node<Service> node) {
             System.out.println(node.data.getName());
