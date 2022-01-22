@@ -14,12 +14,23 @@ public class allAgencies {
         return allAgencies;
     }
 
+    boolean canRemove(Agency agency) {
+        Node<Agency> node = allAgencies.getTail();
+        int count = 0;
+        while (node != null) {
+            if (node.data.getName().equals(agency.getName()))
+                count++;
+            node = node.pre;
+        }
+        if (count > 1) return false;
+        else return true;
+    }
 
     void listAgencies() {
         allAgencies.traverse(DLT);
     }
 
-    DListTraverseMethod<Agency> DLT = new DListTraverseMethod<Agency>() {
+    DListTraverseMethod<Agency> DLT = new DListTraverseMethod<>() {
         @Override
         public void start(Node<Agency> node) {
             System.out.println(node.data.getName());

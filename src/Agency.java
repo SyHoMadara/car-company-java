@@ -30,13 +30,11 @@ public class Agency {
 
     Node<Service> search(Service service) {
         Node<Service> node = AgencyServices.getTail();
-        int i = 0;
-        while (i < AgencyServices.getLength()) {
+        while (node != null) {
             if (node.data.getName().equals(service.getName()))
                 return node;
             else {
                 node = node.pre;
-                i++;
             }
         }
         return null;
