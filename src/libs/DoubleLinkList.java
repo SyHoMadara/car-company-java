@@ -1,10 +1,5 @@
 package libs;
 
-
-import javafx.util.Pair;
-import java.util.Comparator;
-import java.util.PriorityQueue;
-
 public class DoubleLinkList<T> {
     Node<T> head, tail;
     int length;
@@ -17,6 +12,10 @@ public class DoubleLinkList<T> {
 
     public int getLength() {
         return this.length;
+    }
+
+    public Node<T> getTail() {
+        return this.tail;
     }
 
     public Node<T> insertAfter(Node<T> node, T data) {
@@ -118,25 +117,4 @@ public class DoubleLinkList<T> {
         length--;
         return true;
     }
-    /*
-    usage
-    public static void main(String[] args) {
-        DoubleLinkList<Integer> l = new DoubleLinkList<>();
-        for (int i = 0; i < 10; i++) {
-            l.pushBack(i);
-        }
-        Node<Integer> node = l.getAt(5);
-        l.remove(node);
-        try {
-            l.traverse(new DListTraverseMethod<Integer>() {
-                @Override
-                public void start(Node<Integer> node) {
-                    System.out.println(node.data);
-                }
-            });
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-     */
 }

@@ -1,6 +1,5 @@
 package libs;
 
-
 import java.util.*;
 
 import static java.lang.Math.max;
@@ -79,7 +78,7 @@ public class PQueue<T> {
     }
 
     void resize() {
-        T []b = (T[]) new Object[max(2*n, 1)];
+        T[] b = (T[]) new Object[max(2*n, 1)];
         if (n >= 0) System.arraycopy(a, 0, b, 0, n);
         a = b;
     }
@@ -87,8 +86,7 @@ public class PQueue<T> {
     boolean isEmpty(){
         return n == 0;
     }
-    /*
-    usage
+
     public static void main(String[] args) {
         PQueue<Pair<Integer, Integer>> p = new PQueue<>(new Comparator<Pair<Integer, Integer>>() {
             @Override
@@ -111,5 +109,5 @@ public class PQueue<T> {
             System.out.println(pp.getKey() + " " + pp.getValue());
         }
     }
-     */
+
 }

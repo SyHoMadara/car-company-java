@@ -5,19 +5,17 @@ public class Main {
 
     public static void main(String args[]) {
 
-        DoubleLinkList<Agency> dll = new DoubleLinkList<>();
-        Node<Agency> a = new Node<>();
+        allAgencies allAgencies = new allAgencies();
 
-        allAgencies allAgency = new allAgencies();
         Agency agency = new Agency("kabol");
         Agency agency2 = new Agency("tehran");
         Agency agency3 = new Agency("qazvin");
 
-        allAgency.addAgency(agency);
-        allAgency.addAgency(agency2);
-        allAgency.addAgency(agency3);
+        allAgencies.addAgency(agency);
+        allAgencies.addAgency(agency2);
+        allAgencies.addAgency(agency3);
 
-        allAgency.listAgencies();
+        allAgencies.listAgencies();
 
         System.out.println("--------------");
 
@@ -43,11 +41,15 @@ public class Main {
         allServices.listServices();
 
         agency2.addService(service1);
+        agency2.addService(service2);
 
         System.out.println("--------------");
 
         agency2.listAgencyServices();
-        agency.listAgencyServices();
+        System.out.println("--------------");
+
+        agency2.removeService(service2);
+        agency2.listAgencyServices();
 
 
     }

@@ -7,7 +7,7 @@ public class allServices {
     private DoubleLinkList<Service> allServices = new DoubleLinkList<>();
 
     void addService(Service service) {
-        allServices.pushTail(service);
+        allServices.pushBack(service);
     }
 
     DoubleLinkList<Service> getAllServices() {

@@ -4,6 +4,8 @@ import libs.Node;
 
 public class Agency {
 
+    public static DoubleLinkList<Agency> allAgencies = new DoubleLinkList<>();
+
     private String name;
     private DoubleLinkList<Service> AgencyServices = new DoubleLinkList<>();
 
@@ -17,10 +19,27 @@ public class Agency {
     }
 
     void addService(Service service) {
-        AgencyServices.pushTail(service);
+        AgencyServices.pushBack(service);
     }
 
     void removeService(Service service) {
+        Node<Service> node = search(service);
+        if (node != null)
+            AgencyServices.remove(node);
+    }
+
+    Node<Service> search(Service service) {
+        Node<Service> node = AgencyServices.getTail();
+        int i = 0;
+        while (i < AgencyServices.getLength()) {
+            if (node.data.getName().equals(service.getName()))
+                return node;
+            else {
+                node = node.pre;
+                i++;
+            }
+        }
+        return null;
 
     }
 
@@ -37,6 +56,5 @@ public class Agency {
             }
         }
     };
-
 
 }

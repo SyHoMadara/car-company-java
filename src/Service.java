@@ -14,7 +14,7 @@ public class Service {
     }
 
     void addSubService(Service service) {
-        this.subServices.pushTail(service);
+        this.subServices.pushBack(service);
     }
 
     DoubleLinkList<Service> getSubServices() {

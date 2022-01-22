@@ -7,20 +7,15 @@ public class allAgencies {
     private DoubleLinkList<Agency> allAgencies = new DoubleLinkList<>();
 
     void addAgency(Agency agency){
-        allAgencies.pushTail(agency);
+        allAgencies.pushBack(agency);
     }
 
     DoubleLinkList<Agency> getAllAgencies() {
         return allAgencies;
     }
 
-    boolean checkService(Service service) {
-        int count = 0;
-        for (Agency a : this.allAgencies) {
-            a.
-        }
-        return false;
-    }
+
+
 
     void listAgencies() {
         allAgencies.traverse(DLT);
